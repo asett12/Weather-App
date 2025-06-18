@@ -2,11 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
   </head>
-  <body>
+  <body class="min-h-screen flex justify-center items-center font-mono text-white">
+    <div class="card h-auto p-5 bg-gradient-to-br from-teal-300 via-blue-300 to-indigo-500 rounded-2xl">
+      <div class="w-100 px-5 flex justify-between items-center space-x-2.5">
+        <input type="text" placeholder="Find city here..." class="searchBox w-80 h-10 border border-transparent rounded-3xl shadow-inner focus:outline-none focus:ring-2 ring-indigo-800 bg-white  text-gray-500 py-2 px-4">
+        <button class="searchBtn w-10 h-10 border border-transparent rounded-3xl shadow-inner flex justify-center items-center bg-white hover:bg-teal-100 active:bg-teal-200 transition-color duration-100"><img class="w-5" src="/images/search.png" alt=""></button>
+      </div>
+      <div class="flex flex-col place-content-center place-items-center px-5 py-5">
+        <div class="weatherIcon my-10"><img class="w-20" src="/images/usher.png" alt=""></div>
+        <div class="temperature text-5xl mb-4"></div>
+        <div class="cityName text-3xl mb-10">Weather App</div>
+        <div class="weatherDetails w-70 flex justify-between">
+          <div class="humidityBox">
+            <div class="flex items-center space-x-3">
+              <img class="weatherIcon w-10" src="/images/humidity.png" alt="">
+              <p class="humidityPercentage"></p>
+            </div>
+            <p class="mt-2">Humidity</p>
+          </div>
+          <div class="humidityBox">
+            <div class="flex items-center space-x-3">
+              <img class="w-10" src="/images/wind-power.png" alt="">
+              <p class="windSpeed"></p>
+            </div>
+            <p class="mt-2">Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
